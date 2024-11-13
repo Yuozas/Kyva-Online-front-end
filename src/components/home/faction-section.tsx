@@ -3,6 +3,7 @@
 import React from 'react';
 import PageLayout from '@/components/layout/page-layout';
 import { FACTIONS } from './constants';
+import Image from "next/image";
 
 export const FactionSection = () => (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
@@ -17,7 +18,7 @@ export const FactionSection = () => (
                         className="group relative overflow-hidden rounded-lg bg-gray-800/50 backdrop-blur-sm hover:transform hover:scale-105 transition-all duration-300"
                     >
                         <div className="aspect-[3/4] relative">
-                            <img
+                            <Image
                                 src={faction.img}
                                 alt={faction.name}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110"
