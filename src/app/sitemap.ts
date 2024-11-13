@@ -1,30 +1,32 @@
-import { MetadataRoute } from 'next'
+import {MetadataRoute} from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+    const baseUrl = 'https://kyva.online';
+
     return [
         {
-            url: 'https://kyva.online',
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
+            url: baseUrl,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'weekly' as const,
             priority: 1,
         },
         {
-            url: 'https://kyva.online/about',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
+            url: `${baseUrl}/about`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'monthly' as const,
             priority: 0.8,
         },
         {
-            url: 'https://kyva.online/news',
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://kyva.online/rankings',
-            lastModified: new Date(),
-            changeFrequency: 'daily',
+            url: `${baseUrl}/news`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'daily' as const,
             priority: 0.9,
         },
-    ]
+        {
+            url: `${baseUrl}/rankings`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'hourly' as const,
+            priority: 0.8,
+        },
+    ];
 }
