@@ -20,6 +20,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://kyva.online'),
     title: "Kyva Online",
     description: "Strategic Fantasy RPG",
     icons: {
