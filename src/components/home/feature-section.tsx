@@ -40,9 +40,12 @@ export const FeatureSection = () => {
                     </div>
                     <div className="bg-gray-800/50 rounded-lg aspect-video overflow-hidden">
                         <Image
-                            src="/api/placeholder/800/450"
+                            src={HERO_FEATURES[activeFeature].img}
                             alt={HERO_FEATURES[activeFeature].title}
                             className="w-full h-full object-cover"
+                            width={832}
+                            height={1472}
+                            quality={100}
                         />
                     </div>
                 </div>

@@ -8,27 +8,35 @@ import PageLayout from '@/components/layout/page-layout';
 export const HeroSection = () => (
     <div className="relative min-h-screen flex items-end pb-32">
         {/* Background Image with responsive sizes */}
-        <picture className="absolute inset-0">
-            {/* 4K screens */}
-            <source
-                srcSet="/images/hero-bg-4k.png"
-                media="(min-width: 2560px)"
-            />
-            {/* 2K screens and up to 4K */}
-            <source
-                srcSet="/images/hero-bg-2K.png"
-                media="(min-width: 721px)"
-            />
-            {/* 720p and below */}
+        {/*<picture className="absolute inset-0">*/}
+        {/*    /!* 4K screens *!/*/}
+        {/*    <source*/}
+        {/*        srcSet="/images/hero-bg-4k.png"*/}
+        {/*        media="(min-width: 2560px)"*/}
+        {/*    />*/}
+        {/*    /!* 2K screens and up to 4K *!/*/}
+        {/*    <source*/}
+        {/*        srcSet="/images/hero-bg-2K.png"*/}
+        {/*        media="(min-width: 721px)"*/}
+        {/*    />*/}
+        {/*    /!* 720p and below *!/*/}
+        {/*    <Image*/}
+        {/*        src="/images/hero-bg-low-res.png"*/}
+        {/*        alt="Kyva Online Hero"*/}
+        {/*        fill*/}
+        {/*        priority*/}
+        {/*        className="object-cover"*/}
+        {/*        quality={100}*/}
+        {/*    />*/}
+        {/*</picture>*/}
             <Image
-                src="/images/hero-bg-low-res.png"
+                src="/images/hero-bg-4k.png"
                 alt="Kyva Online Hero"
                 fill
                 priority
                 className="object-cover"
                 quality={100}
             />
-        </picture>
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
