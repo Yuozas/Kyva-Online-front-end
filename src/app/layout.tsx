@@ -36,10 +36,16 @@ export const metadata: Metadata = {
         description: 'Strategic Fantasy RPG',
         images: [
             {
+                url: '/images/kyva-online-logo.png',
+                width: 650,
+                height: 550,
+                alt: 'Kyva Online Logo',
+            },
+            {
                 url: '/images/kyva-favicon-black.svg',
                 width: 32,
                 height: 32,
-                alt: 'Kyva Online',
+                alt: 'Kyva Online Favicon',
             },
         ],
     },
@@ -47,7 +53,8 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Kyva Online',
         description: 'Strategic Fantasy RPG',
-        images: ['/images/kyva-favicon-black.svg'],
+        images: ['/images/kyva-online-logo.png'],
+        creator: '@kyvaonline',  // Add your Twitter handle if you have one
     },
 };
 
