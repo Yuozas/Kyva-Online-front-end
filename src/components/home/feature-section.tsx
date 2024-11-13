@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import PageLayout from '@/components/layout/page-layout';
 import { HERO_FEATURES } from './constants';
+import Image from "next/image";
 
 export const FeatureSection = () => {
     const [activeFeature, setActiveFeature] = useState(0);
@@ -38,7 +39,7 @@ export const FeatureSection = () => {
                         </div>
                     </div>
                     <div className="bg-gray-800/50 rounded-lg aspect-video overflow-hidden">
-                        <img
+                        <Image
                             src="/api/placeholder/800/450"
                             alt={HERO_FEATURES[activeFeature].title}
                             className="w-full h-full object-cover"
