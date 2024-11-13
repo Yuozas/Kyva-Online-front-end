@@ -6,6 +6,7 @@ import { NavigationProvider } from "@/components/providers/providers";
 import { ReactNode } from "react";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { LayoutWrapper } from "@/components/layout/layout-wrapper";
+import { metadata } from "@/app/metadata";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -19,45 +20,7 @@ const geistMono = localFont({
     weight: "100 900",
 });
 
-export const metadata: Metadata = {
-    metadataBase: new URL('https://kyva.online'),
-    title: "Kyva Online",
-    description: "Strategic Fantasy RPG",
-    icons: {
-        icon: '/images/kyva-favicon-black.svg',
-        shortcut: '/images/kyva-favicon-black.svg',
-        apple: '/images/kyva-favicon-black.svg',
-    },
-    openGraph: {
-        type: 'website',
-        locale: 'en_US',
-        url: 'https://kyva.online',
-        siteName: 'Kyva Online',
-        title: 'Kyva Online',
-        description: 'Strategic Fantasy RPG',
-        images: [
-            {
-                url: '/images/kyva-online-logo.png',
-                width: 650,
-                height: 550,
-                alt: 'Kyva Online Logo',
-            },
-            {
-                url: '/images/kyva-favicon-black.svg',
-                width: 32,
-                height: 32,
-                alt: 'Kyva Online Favicon',
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Kyva Online',
-        description: 'Strategic Fantasy RPG',
-        images: ['/images/kyva-online-logo.png'],
-        creator: '@kyvaonline',  // Add your Twitter handle if you have one
-    },
-};
+export { metadata };
 
 export default function RootLayout({
                                        children,
