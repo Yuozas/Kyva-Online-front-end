@@ -59,7 +59,7 @@ export default function AboutPage() {
                                 <span>Follow for Updates</span>
                             </Link>
                             <Link
-                                href="https://discord.gg/kyvaonline"
+                                href="https://discord.gg/KUuCGqTGsP"
                                 target="_blank"
                                 className="flex items-center gap-3 p-4 bg-gray-900/50 rounded-lg text-gray-300 hover:text-white hover:bg-gray-900 transition-colors"
                             >
@@ -67,7 +67,7 @@ export default function AboutPage() {
                                 <span>Join our Community</span>
                             </Link>
                             <Link
-                                href="https://github.com/Yuozas"
+                                href="https://github.com/Yuozas/Kyva-Online-front-end"
                                 target="_blank"
                                 className="flex items-center gap-3 p-4 bg-gray-900/50 rounded-lg text-gray-300 hover:text-white hover:bg-gray-900 transition-colors"
                             >

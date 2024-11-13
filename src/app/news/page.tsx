@@ -17,11 +17,9 @@ export default function NewsPage() {
                             Latest Update
                         </span>
                         <h2 className="text-2xl font-bold text-white mb-2">Development Roadmap Revealed</h2>
-                        <p className="text-blue-100">
-                            Explore our journey from alpha to full release, and see what's coming next for Kyva Online.
-                        </p>
+                        <p className="text-blue-100">{`Explore our journey from alpha to full release, and see what's coming next for Kyva Online.`}</p>
                         <Link
-                            href="/"
+                            href="#"
                             className="inline-flex items-center px-4 py-2 bg-white/10 rounded-lg mt-4 text-white hover:bg-white/20 transition-colors"
                         >
                             Read More
