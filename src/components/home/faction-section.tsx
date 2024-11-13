@@ -22,6 +22,9 @@ export const FactionSection = () => (
                                 src={faction.img}
                                 alt={faction.name}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110"
+                                width={896}
+                                height={1344}
+                                quality={100}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                             <div className="absolute bottom-0 left-0 right-0 p-6">

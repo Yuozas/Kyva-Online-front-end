@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         shortcut: siteConfig.favicon,
         apple: siteConfig.favicon,
     },
-    manifest: "/manifest.json",
+    manifest: "/manifest.webmanifest",
     openGraph: {
         type: 'website',
         locale: 'en_US',
