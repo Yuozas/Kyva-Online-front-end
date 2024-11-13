@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,14 +15,13 @@ const Navbar = () => {
 
     return (
         <header className="relative w-full">
-            {/* Gradient background with fade */}
             <div className={`absolute inset-0 ${
                 isHomePage
                     ? 'bg-gradient-to-b from-gray-900/80 via-gray-900/60 to-transparent backdrop-blur-[2px]'
                     : 'bg-gray-900'
             }`} />
 
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16">
+            <div className="relative z-50 w-full max-w-7xl mx-auto px-8 md:px-16">
                 <div className="flex justify-between items-center h-24">
                     <Link href="/" className="flex items-center space-x-2 relative">
                         <Image
@@ -47,13 +47,11 @@ const Navbar = () => {
                             href="/auth/register"
                             className="relative px-6 py-2 overflow-hidden group bg-blue-600 hover:bg-blue-500 transition-colors rounded-lg"
                         >
-                            {/* Animated border effect */}
                             <span className="absolute inset-x-0 h-[1px] top-0 bg-blue-400/40" />
                             <span className="absolute inset-x-0 h-[1px] bottom-0 bg-blue-400/40" />
                             <span className="absolute inset-y-0 w-[1px] left-0 bg-blue-400/40" />
                             <span className="absolute inset-y-0 w-[1px] right-0 bg-blue-400/40" />
 
-                            {/* Shimmer effect */}
                             <span className="absolute inset-0 w-0 bg-gradient-to-r from-transparent via-blue-400/10 to-transparent group-hover:w-full transition-all duration-500" />
 
                             <span className="relative flex items-center gap-1">
@@ -91,13 +89,13 @@ const Navbar = () => {
                         </svg>
                     </button>
                 </div>
-
-                <MobileNav
-                    isAuthenticated={isAuthenticated}
-                    isOpen={isMenuOpen}
-                    onClose={() => setIsMenuOpen(false)}
-                />
             </div>
+
+            <MobileNav
+                isAuthenticated={isAuthenticated}
+                isOpen={isMenuOpen}
+                onClose={() => setIsMenuOpen(false)}
+            />
         </header>
     );
 };
