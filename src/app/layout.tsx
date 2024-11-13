@@ -22,6 +22,33 @@ const geistMono = localFont({
 export const metadata: Metadata = {
     title: "Kyva Online",
     description: "Strategic Fantasy RPG",
+    icons: {
+        icon: '/images/kyva-favicon-black.svg',
+        shortcut: '/images/kyva-favicon-black.svg',
+        apple: '/images/kyva-favicon-black.svg',
+    },
+    openGraph: {
+        type: 'website',
+        locale: 'en_US',
+        url: 'https://kyva.online',
+        siteName: 'Kyva Online',
+        title: 'Kyva Online',
+        description: 'Strategic Fantasy RPG',
+        images: [
+            {
+                url: '/images/kyva-favicon-black.svg',
+                width: 32,
+                height: 32,
+                alt: 'Kyva Online',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Kyva Online',
+        description: 'Strategic Fantasy RPG',
+        images: ['/images/kyva-favicon-black.svg'],
+    },
 };
 
 export default function RootLayout({

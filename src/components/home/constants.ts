@@ -19,18 +19,22 @@ export const HERO_FEATURES = [
 
 export const FACTIONS = [
     {
+        img: "/images/factions/snake.jpg",
         name: "Snake Faction",
         description: "Masters of cunning and deception, striking when least expected.",
     },
     {
+        img: "/images/factions/eagle.jpg",
         name: "Eagle Faction",
         description: "Proud warriors who value excellence and direct confrontation.",
     },
     {
+        img: "/images/factions/owl.jpg",
         name: "Owl Faction",
         description: "Wise tacticians who seek harmony through understanding.",
     },
     {
+        img: "/images/factions/raven.jpg",
         name: "Raven Faction",
         description: "Analytical minds who rely on strategy and adaptation.",
     },

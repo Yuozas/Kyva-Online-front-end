@@ -18,7 +18,7 @@ export const FactionSection = () => (
                     >
                         <div className="aspect-[3/4] relative">
                             <img
-                                src="/images/snake-faction.jpg"
+                                src={faction.img}
                                 alt={faction.name}
                                 className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110"
                             />
