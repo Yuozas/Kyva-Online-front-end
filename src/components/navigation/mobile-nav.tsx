@@ -23,25 +23,27 @@ export const MobileNav: React.FC<MobileNavProps> = ({
     useEffect(() => {
         if (isOpen) {
             const handleClick = (event: MouseEvent) => {
+                // Check if the click target is the toggle button or its children
+                const toggleButton = document.querySelector('[aria-label="Open main menu"]');
+                if (toggleButton && (toggleButton === event.target || toggleButton.contains(event.target as Node))) {
+                    return;
+                }
+
+                // Only close if clicking outside the nav menu
                 if (navRef.current && !navRef.current.contains(event.target as Node)) {
                     onClose();
                 }
             };
 
-            setTimeout(() => {
+            // Delay adding the click listener to prevent immediate closure
+            const timeoutId = setTimeout(() => {
                 document.addEventListener('click', handleClick);
-            }, 0);
+            }, 100);
 
-            return () => document.removeEventListener('click', handleClick);
-        }
-    }, [isOpen, onClose]);
-
-    // Close menu on scroll
-    useEffect(() => {
-        if (isOpen) {
-            const handleScroll = () => onClose();
-            window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
+            return () => {
+                document.removeEventListener('click', handleClick);
+                clearTimeout(timeoutId);
+            };
         }
     }, [isOpen, onClose]);
 
@@ -58,16 +60,13 @@ export const MobileNav: React.FC<MobileNavProps> = ({
     if (!isOpen) return null;
 
     return (
-        <>
-            {/* Backdrop overlay - positioned under the navbar */}
-            <div
-                className="fixed inset-0 top-[64px] bg-black/40 backdrop-blur-sm z-30"
-                aria-hidden="true"
-            />
-
+        <div
+            className="md:hidden bg-gray-900/95 backdrop-blur-sm"
+            onClick={(e) => e.stopPropagation()} // Prevent clicks from bubbling up
+        >
             {/* Navigation menu */}
-            <div className="fixed inset-x-0 top-16 z-40 px-4" ref={navRef}>
-                <div className="overflow-hidden rounded-lg bg-gray-900 shadow-2xl ring-1 ring-gray-800">
+            <div className="px-4" ref={navRef}>
+                <div className="overflow-hidden rounded-lg bg-gray-900/80 shadow-2xl ring-1 ring-gray-800">
                     <div className="py-3">
                         {NAV_ITEMS.map((item) => (
                             (!item.authRequired || isAuthenticated) && (
@@ -77,13 +76,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                                     onClick={handleNavigation}
                                     className={`relative block w-full text-left px-4 py-3 text-base font-medium transition-all group
                                         ${pathname === item.href
-                                        ? 'text-blue-400 bg-gray-800'
+                                        ? 'text-blue-400 bg-gray-800/80'
                                         : 'text-gray-300 hover:text-white'
                                     }`}
                                 >
                                     <span className="relative z-10 tracking-wide">{item.label}</span>
 
-                                    {/* Active state styles */}
                                     {pathname === item.href && (
                                         <>
                                             <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-transparent" />
@@ -91,14 +89,12 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                                         </>
                                     )}
 
-                                    {/* Hover effect */}
                                     <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full" />
                                 </Link>
                             )
                         ))}
                     </div>
 
-                    {/* Auth section */}
                     <div className="px-3 py-4 border-t border-gray-800/80">
                         <Link
                             href="/auth/login"
@@ -117,6 +113,6 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
