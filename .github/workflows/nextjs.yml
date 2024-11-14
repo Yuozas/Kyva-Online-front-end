@@ -3,16 +3,13 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,6 +37,16 @@ jobs:
         run: npm ci
       - name: Build with Next.js
         run: npm run build
+      - name: Notify Build Status
+        if: always()
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_DEPLOYMENTS_WEBHOOK }}
+        with:
+          args: |
+            🏗️ Build ${{ job.status }}
+            Branch: main
+            Commit: ${{ github.event.head_commit.message }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -55,3 +62,13 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify Deployment Status
+        if: always()
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_DEPLOYMENTS_WEBHOOK }}
+        with:
+          args: |
+            ${{ job.status == 'success' && '🚀 Deployment successful!' || '❌ Deployment failed' }}
+            Environment: github-pages
+            URL: ${{ steps.deployment.outputs.page_url }}

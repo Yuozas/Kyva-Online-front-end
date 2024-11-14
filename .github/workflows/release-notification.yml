@@ -1,0 +1,22 @@
+name: Release Notification
+on:
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Release
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_ANNOUNCEMENTS_WEBHOOK }}
+        with:
+          args: |
+            📣 **New Release ${{ github.event.release.tag_name }}**
+            
+            **Release Title:** ${{ github.event.release.name }}
+            
+            ${{ github.event.release.body }}
+            
+            🔗 [View Release](${{ github.event.release.html_url }})
