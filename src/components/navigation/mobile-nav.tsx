@@ -98,17 +98,10 @@ export const MobileNav: React.FC<MobileNavProps> = ({
                     <div className="px-3 py-4 border-t border-gray-800/80">
                         <Link
                             href="/auth/login"
-                            className="block w-full text-center px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
-                            onClick={handleNavigation}
-                        >
-                            Login
-                        </Link>
-                        <Link
-                            href="/auth/register"
                             className="block w-full text-center mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium text-sm transition-colors"
                             onClick={handleNavigation}
                         >
-                            Register
+                            Play
                         </Link>
                     </div>
                 </div>

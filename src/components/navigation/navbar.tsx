@@ -37,13 +37,6 @@ const Navbar = () => {
                         <div className="hidden md:flex items-center gap-6">
                             <Link
                                 href="/auth/login"
-                                className="relative px-4 py-2 text-gray-300 hover:text-white transition-colors group"
-                            >
-                                <span className="relative z-10">Login</span>
-                                <div className="absolute inset-0 h-[1px] w-0 bg-blue-500 bottom-1.5 group-hover:w-full transition-all duration-300" />
-                            </Link>
-                            <Link
-                                href="/auth/register"
                                 className="relative px-6 py-2 overflow-hidden group bg-blue-600 hover:bg-blue-500 transition-colors rounded-lg"
                             >
                                 <span className="absolute inset-x-0 h-[1px] top-0 bg-blue-400/40" />
@@ -54,7 +47,7 @@ const Navbar = () => {
                                 <span className="absolute inset-0 w-0 bg-gradient-to-r from-transparent via-blue-400/10 to-transparent group-hover:w-full transition-all duration-500" />
 
                                 <span className="relative flex items-center gap-1">
-                                    Register
+                                    Play
                                     <svg
                                         className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
                                         fill="none"
