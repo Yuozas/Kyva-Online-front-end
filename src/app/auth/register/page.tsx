@@ -1,7 +1,7 @@
 import PageLayout from '@/components/layout/page-layout';
 import Link from "next/link";
 import {RiArrowRightSLine} from "react-icons/ri";
-import {FaFacebook, FaGoogle, FaTwitter} from "react-icons/fa";
+import {FaFacebook} from "react-icons/fa";
 import GoogleIcon from "@/components/icons/GoogleIcon";
 import {FaXTwitter} from "react-icons/fa6";
 

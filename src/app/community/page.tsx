@@ -7,7 +7,6 @@ import { PiChalkboardTeacher, PiUsersThree } from 'react-icons/pi';
 import { GiDiscussion } from 'react-icons/gi';
 
 export default function CommunityPage() {
-    // @ts-ignore
     return (
         <PageLayout maxWidth="7xl" className="min-h-screen px-4">
             <section className="py-8">
