@@ -6,7 +6,7 @@ import { FACTIONS } from './constants';
 import Image from "next/image";
 
 export const FactionSection = () => (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+    <section className="py-20">
         <PageLayout>
             <h2 className="text-4xl font-bold text-center text-white mb-16">
                 Choose Your Path

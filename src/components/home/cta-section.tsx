@@ -5,7 +5,7 @@ import Link from 'next/link';
 import PageLayout from '@/components/layout/page-layout';
 
 export const CtaSection = () => (
-    <section className="py-20 bg-gray-800">
+    <section className="py-20">
         <PageLayout>
             <div className="relative overflow-hidden rounded-2xl bg-blue-600">
                 <div className="absolute inset-0 bg-[url('/api/placeholder/1920/600')] bg-cover bg-center opacity-20" />

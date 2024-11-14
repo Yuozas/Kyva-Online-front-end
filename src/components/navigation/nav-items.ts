@@ -8,6 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
     { label: 'Home', href: '/' },
     { label: 'News', href: '/news' },
     { label: 'About', href: '/about' },
+    { label: 'Community', href: '/community' },
     { label: 'Game Hub', href: '/game', authRequired: true },
     { label: 'Rankings', href: '/rankings' },
 ];
