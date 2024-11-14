@@ -42,15 +42,15 @@ export const Footer = () => {
                     <div className="space-y-4">
                         <h3 className="text-white font-bold text-lg">Connect</h3>
                         <div className="flex flex-col gap-4">
-                            <Link
-                                href="https://discord.gg/KUuCGqTGsP"
-                                target="_blank"
-                                className="inline-flex items-center gap-2 px-4 py-2 bg-[#5865F2] hover:bg-[#4752c4] text-white rounded-lg transition-colors text-sm w-fit"
-                            >
-                                <FaDiscord className="w-4 h-4" />
-                                Join Discord
-                            </Link>
                             <div className="flex items-center gap-4">
+                                <Link
+                                    href="https://discord.gg/KUuCGqTGsP"
+                                    target="_blank"
+                                    className="text-gray-400 hover:text-white transition-colors"
+                                    aria-label="Discord"
+                                >
+                                    <FaDiscord className="w-4 h-4" />
+                                </Link>
                                 <Link
                                     href="https://x.com/kyvaonline"
                                     target="_blank"
