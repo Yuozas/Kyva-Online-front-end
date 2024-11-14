@@ -10,7 +10,7 @@ export default function AboutPage() {
 
                 <div className="space-y-8">
                     {/* Game Overview */}
-                    <div className="bg-gray-800/50 rounded-lg p-6">
+                    <div className="bg-black bg-opacity-10 rounded-lg p-6">
                         <h2 className="text-2xl font-bold text-white mb-4">Strategic Fantasy RPG</h2>
                         <p className="text-gray-300 leading-relaxed mb-4">
                             Kyva Online is a strategic fantasy RPG that emphasizes tactical combat, versatile character building, and social interaction. Choose your faction, forge alliances, and become a legend in a world where every decision matters.
@@ -28,26 +28,26 @@ export default function AboutPage() {
                     </div>
 
                     {/* Development Updates */}
-                    <div className="bg-gray-800/50 rounded-lg p-6">
+                    <div className="bg-black bg-opacity-10 rounded-lg p-6">
                         <h2 className="text-2xl font-bold text-white mb-4">Development Status</h2>
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
                                 <div className="w-3 h-3 rounded-full bg-blue-500"></div>
-                                <p className="text-gray-300">Alpha testing starting Q2 2024</p>
+                                <p className="text-gray-300">Alpha testing starting Q2, March 2025</p>
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-3 h-3 rounded-full bg-blue-500/60"></div>
-                                <p className="text-gray-300">Beta release planned for Q4 2024</p>
+                                <p className="text-gray-300">Beta release planned for Q4, May 2025</p>
                             </div>
                             <div className="flex items-center gap-3">
                                 <div className="w-3 h-3 rounded-full bg-blue-500/30"></div>
-                                <p className="text-gray-300">Full release targeted for 2025</p>
+                                <p className="text-gray-300">Full release targeted for 2026</p>
                             </div>
                         </div>
                     </div>
 
                     {/* Connect Section */}
-                    <div className="bg-gray-800/50 rounded-lg p-6">
+                    <div className="bg-black bg-opacity-10 rounded-lg p-6">
                         <h2 className="text-2xl font-bold text-white mb-4">Connect With Us</h2>
                         <div className="flex flex-col gap-4">
                             <Link

@@ -29,24 +29,24 @@ export default function NewsPage() {
 
                 {/* News Categories */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <div className="bg-gray-800/50 p-6 rounded-lg">
+                    <div className="bg-black bg-opacity-10 p-6 rounded-lg">
                         <div className="flex items-center gap-3 mb-4">
                             <PiGameController className="w-6 h-6 text-blue-400" />
                             <h3 className="text-xl font-bold text-white">Development Updates</h3>
                         </div>
                         <div className="space-y-4">
                             <div className="bg-gray-900/50 p-4 rounded-lg">
-                                <span className="text-gray-400 text-sm">March 2024</span>
+                                <span className="text-gray-400 text-sm">December 2024</span>
                                 <p className="text-gray-300 font-medium">Combat System Progress Update</p>
                             </div>
                             <div className="bg-gray-900/50 p-4 rounded-lg">
-                                <span className="text-gray-400 text-sm">February 2024</span>
+                                <span className="text-gray-400 text-sm">January 2025</span>
                                 <p className="text-gray-300 font-medium">Faction System Development</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-gray-800/50 p-6 rounded-lg">
+                    <div className="bg-black bg-opacity-10 p-6 rounded-lg">
                         <div className="flex items-center gap-3 mb-4">
                             <FaTrophy className="w-6 h-6 text-blue-400" />
                             <h3 className="text-xl font-bold text-white">Tournament News</h3>
@@ -59,7 +59,7 @@ export default function NewsPage() {
                 </div>
 
                 {/* Upcoming Features */}
-                <div className="bg-gray-800/50 rounded-lg p-6">
+                <div className="bg-black bg-opacity-10 rounded-lg p-6">
                     <h2 className="text-2xl font-bold text-white mb-4">Upcoming Features</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="flex items-start gap-3 bg-gray-900/50 p-4 rounded-lg">
@@ -68,7 +68,7 @@ export default function NewsPage() {
                             </div>
                             <div>
                                 <h4 className="font-medium text-white">Alpha Testing</h4>
-                                <p className="text-gray-400 text-sm">Early access coming Q2 2024</p>
+                                <p className="text-gray-400 text-sm">Early access coming Q2 2025</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-3 bg-gray-900/50 p-4 rounded-lg">

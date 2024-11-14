@@ -7,6 +7,7 @@ import { PiChalkboardTeacher, PiUsersThree } from 'react-icons/pi';
 import { GiDiscussion } from 'react-icons/gi';
 
 export default function CommunityPage() {
+    // @ts-ignore
     return (
         <PageLayout maxWidth="7xl" className="min-h-screen px-4">
             <section className="py-8">
@@ -16,7 +17,7 @@ export default function CommunityPage() {
                     {/* Left Column: Discord and Social */}
                     <div className="space-y-8">
                         {/* Discord Widget Section */}
-                        <div className="bg-gray-800/50 rounded-lg p-6">
+                        <div className="bg-black bg-opacity-10 rounded-lg p-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <FaDiscord className="w-6 h-6 text-blue-400" />
                                 <h2 className="text-2xl font-bold text-white">Join Our Discord</h2>
@@ -25,15 +26,13 @@ export default function CommunityPage() {
                                 src="https://discord.com/widget?id=1306381950029922344&theme=dark"
                                 width="100%"
                                 height="500"
-                                allowTransparency={true}
-                                frameBorder="0"
                                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                                 className="rounded-lg"
                             />
                         </div>
 
                         {/* Social Links */}
-                        <div className="bg-gray-800/50 rounded-lg p-6">
+                        <div className="bg-black bg-opacity-10 rounded-lg p-6">
                             <h2 className="text-2xl font-bold text-white mb-6">Connect With Us</h2>
                             <div className="space-y-4">
                                 <Link
@@ -84,7 +83,7 @@ export default function CommunityPage() {
                     {/* Right Column: Community Features */}
                     <div className="space-y-8">
                         {/* Community Features Section */}
-                        <div className="bg-gray-800/50 rounded-lg p-6">
+                        <div className="bg-black bg-opacity-10 rounded-lg p-6">
                             <h2 className="text-2xl font-bold text-white mb-6">Community Features</h2>
                             <div className="space-y-4">
                                 <div className="bg-gray-900/50 p-4 rounded-lg">
@@ -120,7 +119,7 @@ export default function CommunityPage() {
                         </div>
 
                         {/* Community Guidelines Preview */}
-                        <div className="bg-gray-800/50 rounded-lg p-6">
+                        <div className="bg-black bg-opacity-10 rounded-lg p-6">
                             <h2 className="text-2xl font-bold text-white mb-4">Community Guidelines</h2>
                             <p className="text-gray-300 mb-4">
                                 We&apos;re building a friendly and inclusive community. Our guidelines ensure everyone can enjoy

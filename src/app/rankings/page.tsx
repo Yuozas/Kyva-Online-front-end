@@ -21,7 +21,7 @@ export default function RankingsPage() {
 
                 {/* Ranking Categories */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-gray-800/50 p-6 rounded-lg">
+                    <div className="bg-black bg-opacity-10 p-6 rounded-lg">
                         <div className="flex items-center gap-3 mb-4">
                             <GiCrossedSwords className="w-6 h-6 text-blue-400" />
                             <h3 className="text-xl font-bold text-white">PvP Rankings</h3>
@@ -38,7 +38,7 @@ export default function RankingsPage() {
                         </div>
                     </div>
 
-                    <div className="bg-gray-800/50 p-6 rounded-lg">
+                    <div className="bg-black bg-opacity-10 p-6 rounded-lg">
                         <div className="flex items-center gap-3 mb-4">
                             <FaUsers className="w-6 h-6 text-blue-400" />
                             <h3 className="text-xl font-bold text-white">Guild Rankings</h3>
@@ -57,7 +57,7 @@ export default function RankingsPage() {
                 </div>
 
                 {/* Rewards Preview */}
-                <div className="bg-gray-800/50 p-6 rounded-lg">
+                <div className="bg-black bg-opacity-10 p-6 rounded-lg">
                     <div className="flex items-center gap-3 mb-6">
                         <GiTrophy className="w-6 h-6 text-blue-400" />
                         <h3 className="text-xl font-bold text-white">Season Rewards</h3>
