@@ -86,9 +86,6 @@ export const FeatureSection = () => {
                                 />
                             </div>
 
-                            {/* Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 to-gray-900/0 pointer-events-none" />
-
                             {/* Animated Border */}
                             <div className="absolute inset-0 border border-gray-700/50 rounded-lg" />
                             <div className={`absolute inset-0 border-2 border-blue-500/50 rounded-lg transition-opacity duration-500 ${
