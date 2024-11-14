@@ -16,6 +16,7 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ isAuthenticated }) => {
             {NAV_ITEMS.map((item) => (
                 (!item.authRequired || isAuthenticated) && (
                     <Link
+                        draggable="false"
                         key={item.href}
                         href={item.href}
                         className={`relative px-4 py-2 group ${

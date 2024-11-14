@@ -60,52 +60,62 @@ export const MobileNav: React.FC<MobileNavProps> = ({
     if (!isOpen) return null;
 
     return (
-        <div
-            className="md:hidden bg-gray-900/95 backdrop-blur-sm"
-            onClick={(e) => e.stopPropagation()} // Prevent clicks from bubbling up
-        >
+        <>
+            {/* Backdrop overlay - positioned under the navbar */}
+            <div
+                className="fixed inset-0 top-[95px] bg-black/40 backdrop-blur-sm z-30"
+                aria-hidden="true"
+            />
+
             {/* Navigation menu */}
-            <div className="px-4" ref={navRef}>
-                <div className="overflow-hidden rounded-lg bg-gray-900/80 shadow-2xl ring-1 ring-gray-800">
-                    <div className="py-3">
-                        {NAV_ITEMS.map((item) => (
-                            (!item.authRequired || isAuthenticated) && (
-                                <Link
-                                    key={item.href}
-                                    href={item.href}
-                                    onClick={handleNavigation}
-                                    className={`relative block w-full text-left px-4 py-3 text-base font-medium transition-all group
+            <div
+                className="fixed w-screen md:hidden z-40"
+                onClick={(e) => e.stopPropagation()} // Prevent clicks from bubbling up
+            >
+                {/* Navigation menu */}
+                <div className="px-4" ref={navRef}>
+                    <div className="overflow-hidden rounded-lg bg-gray-900/90 shadow-2xl ring-1 ring-gray-800">
+                        <div className="py-3">
+                            {NAV_ITEMS.map((item) => (
+                                (!item.authRequired || isAuthenticated) && (
+                                    <Link
+                                        draggable="false"
+                                        key={item.href}
+                                        href={item.href}
+                                        onClick={handleNavigation}
+                                        className={`relative block w-full text-left px-4 py-3 text-base font-medium transition-all group select-none
                                         ${pathname === item.href
-                                        ? 'text-blue-400 bg-gray-800/80'
-                                        : 'text-gray-300 hover:text-white'
-                                    }`}
-                                >
-                                    <span className="relative z-10 tracking-wide">{item.label}</span>
+                                            ? 'text-blue-400 bg-gray-800/80'
+                                            : 'text-gray-300 hover:text-white'
+                                        }`}
+                                    >
+                                        <span className="relative z-10 tracking-wide">{item.label}</span>
 
-                                    {pathname === item.href && (
-                                        <>
-                                            <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-transparent" />
-                                            <span className="absolute left-0 top-0 h-full w-[2px] bg-blue-500" />
-                                        </>
-                                    )}
+                                        {pathname === item.href && (
+                                            <>
+                                                <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-transparent" />
+                                                <span className="absolute left-0 top-0 h-full w-[2px] bg-blue-500" />
+                                            </>
+                                        )}
 
-                                    <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full" />
-                                </Link>
-                            )
-                        ))}
-                    </div>
+                                        <span className="absolute left-0 bottom-0 h-[1px] w-0 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                                    </Link>
+                                )
+                            ))}
+                        </div>
 
-                    <div className="px-3 py-4 border-t border-gray-800/80">
-                        <Link
-                            href="/auth/login"
-                            className="block w-full text-center mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium text-sm transition-colors"
-                            onClick={handleNavigation}
-                        >
-                            Play
-                        </Link>
+                        <div className="px-3 py-4 border-t border-gray-800/80">
+                            <Link
+                                href="/auth/login"
+                                className="block w-full text-center mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium text-sm transition-colors"
+                                onClick={handleNavigation}
+                            >
+                                Play
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };

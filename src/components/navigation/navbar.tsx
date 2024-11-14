@@ -20,15 +20,16 @@ const Navbar = () => {
                     ? 'bg-gradient-to-b from-gray-900/95 via-gray-900/95 to-gray-900/90'
                     : 'bg-gray-900/95'
             }`}>
-                <div className="relative w-full max-w-7xl mx-auto px-8 md:px-16">
-                    <div className="flex justify-between items-center h-24">
-                        <Link href="/" className="flex items-center space-x-2 relative">
+                <div className="relative w-full max-w-7xl mx-auto px-8 md:px-16 select-none">
+                    <div className="flex justify-between items-center h-24" >
+                        <Link draggable="false" href="/" className="flex items-center space-x-2 relative">
                             <Image
                                 src="/images/kyva-online-logo.png"
                                 alt="Kyva Online"
                                 width={120}
                                 height={40}
                                 className="h-10 w-auto"
+                                onDragStart={(e) => e.preventDefault()}
                             />
                         </Link>
 
@@ -36,6 +37,7 @@ const Navbar = () => {
 
                         <div className="hidden md:flex items-center gap-6">
                             <Link
+                                draggable="false"
                                 href="/auth/login"
                                 className="relative px-6 py-2 overflow-hidden group bg-blue-600 hover:bg-blue-500 transition-colors rounded-lg"
                             >
