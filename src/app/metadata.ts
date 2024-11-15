@@ -40,11 +40,28 @@ export const metadata: Metadata = {
     authors: siteConfig.authors,
     creator: siteConfig.creator,
     icons: {
-        icon: siteConfig.favicon,
-        shortcut: siteConfig.favicon,
-        apple: siteConfig.favicon,
+        icon: [
+            {
+                url: '/favicon.svg',
+                type: 'image/svg+xml',
+            },
+            {
+                url: '/favicon-96x96.png',
+                sizes: '96x96',
+                type: 'image/png',
+            },
+            {
+                url: '/favicon.ico',
+                type: 'image/x-icon',
+            }
+        ],
+        apple: {
+            url: '/apple-touch-icon.png',
+            sizes: '180x180',
+            type: 'image/png',
+        },
     },
-    manifest: "/manifest.webmanifest",
+    manifest: '/manifest.webmanifest',
     openGraph: {
         type: 'website',
         locale: 'en_US',
